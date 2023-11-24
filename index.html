@@ -8,9 +8,11 @@
 <body>
 
 <h1>Список книг</h1>
+include 'db_connection.sql';
 
-<?php
+\*<?php
 include 'books.php';
+<p>SELECT * FROM books<\p>
 
 $query = "SELECT * FROM books LIMIT 10";
 $result = $connection->query($query);
@@ -28,7 +30,7 @@ if ($result->num_rows > 0) {
 }
 
 $connection->close();
-?>
+?>*\
 
 
 
